@@ -406,7 +406,12 @@ erpnext.selling.SellingController = erpnext.TransactionController.extend({
 				this.set_batch_number(cdt, cdn);
 			}
 	},
-
+	work: function(doc, cdt, cdn) {
+		this.calculate_taxes_and_totals();
+	},
+	work_rate: function(doc, cdt, cdn) {
+		this.calculate_taxes_and_totals();
+	},
 	qty: function(doc, cdt, cdn) {
 		this._super(doc, cdt, cdn);
 

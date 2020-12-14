@@ -1,0 +1,12 @@
+.form-group[data-fieldname=items] .row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.form-group[data-fieldname=items] .row .col[data-fieldname=item_code] {
+  height: auto;
+}
+.form-group[data-fieldname=items] .row .col[data-fieldname=item_code] > div {
+  word-break: break-all;
+  white-space: normal;
+}

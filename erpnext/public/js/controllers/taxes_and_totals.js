@@ -105,9 +105,11 @@ erpnext.taxes_and_totals = erpnext.payments.extend({
 				item.net_rate = item.rate;
 
 				if ((!item.qty) && me.frm.doc.is_return) {
-					item.amount = flt(item.rate * -1, precision("amount", item));
+					// item.amount = flt(item.rate * -1, precision("amount", item));
+					item.amount = flt((item.rate + item.work_rate) * -1, precision("amount", item));
 				} else {
-					item.amount = flt(item.rate * item.qty, precision("amount", item));
+					// item.amount = flt(item.rate * item.qty, precision("amount", item));
+					item.amount = flt((item.rate + item.work_rate) * item.qty)
 				}
 
 				item.net_amount = item.amount;

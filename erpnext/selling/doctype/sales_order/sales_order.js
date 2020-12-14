@@ -90,6 +90,14 @@ frappe.ui.form.on("Sales Order Item", {
 		if(!frm.doc.delivery_date) {
 			erpnext.utils.copy_value_in_all_rows(frm.doc, cdt, cdn, "items", "delivery_date");
 		}
+	},
+	work: function(frm, cdt, cdn) {
+		$.each(frm.doc.items || [], function(i, d) {
+			if (!d.work) {
+				d.work_rate = 0.0;
+				refresh_field("work_rate", cdn, "items");
+			}
+		});
 	}
 });
 

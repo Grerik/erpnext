@@ -118,9 +118,10 @@ class calculate_taxes_and_totals(object):
 				item.net_rate = item.rate
 
 				if not item.qty and self.doc.get("is_return"):
-					item.amount = flt(-1 * item.rate, item.precision("amount"))
+					# item.amount = flt(-1 * item.rate, item.precision("amount"))
+					item.amount = flt(-1 * (item.rate + item.work_rate), item.precision("amount"))
 				else:
-					item.amount = flt(item.rate * item.qty,	item.precision("amount"))
+					item.amount = flt((item.rate + item.work_rate) * item.qty,	item.precision("amount"))
 
 				item.net_amount = item.amount
 
