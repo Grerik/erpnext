@@ -1,6 +1,5 @@
-.form-group[data-fieldname=items] .row {
+.form-group[data-fieldname=items] .grid-row > .row {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
 }
 .form-group[data-fieldname=items] .row .col[data-fieldname=item_code] {

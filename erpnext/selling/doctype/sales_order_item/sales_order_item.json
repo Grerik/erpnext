@@ -762,15 +762,18 @@
      "fieldname": "work",
      "fieldtype": "Link",
      "label": "Work",
-     "options": "Item",
-     "in_list_view": 1
+     "options": "Item"
    },
    {
      "fieldname": "work_rate",
      "fieldtype": "Currency",
      "label": "Work rate",
-     "options": "currency",
-     "in_list_view": 1
+     "options": "currency"
+   },
+   {
+    "fieldname": "groups",
+    "fieldtype": "Small Text",
+    "label": "Groups"
    }
  ],
  "idx": 1,
